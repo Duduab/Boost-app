@@ -1,0 +1,67 @@
+body, html {
+    font-family: Rubik;
+    direction: rtl;
+}
+
+
+h1{
+    margin:20px;
+    font-weight:bold;
+  }
+  section{
+    margin: 50px auto;
+    position:relative;
+    margin-bottom:80px;
+    overflow:hidden;
+    height: 500px;
+    width: 60%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+
+  div.img-wrapper{
+    background-image: url("https://images.pexels.com/photos/1229846/pexels-photo-1229846.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      width: 50%;
+      left: 0;
+  }
+  p{
+    padding: 20px;
+  }
+
+  #phone {
+    background-color: transparent;
+  }
+
+  #phone:focus {
+      outline: none;
+  }
+
+  .my-bt {
+    position: absolute;
+    margin-right: -90px;
+    width: 150px;
+  }
+
+  .my-sec-btn {
+    position: absolute;
+    margin-right: -90px;
+    width: 150px;  
+  }
+
+  .loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    right: 110px;
+    position: absolute;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+

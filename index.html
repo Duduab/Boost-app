@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Bootstap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-">
+  <script src="app.js"></script>
+</head>
+<body>
+<div class="my-buttons mt-0 d-flex justify-content-center">
+    <div class="row">
+        <div class="col-md-6">
+            <button type="button" onclick="changeToLtr()"  class="btn btn-primary btn-lg">LTR</button>
+        </div>
+        <div class="col-md-6">
+            <button type="button" onclick="changeToRtl()" class="btn btn-secondary btn-lg">RTL</button>
+        </div>
+    </div>
+</div>
+<section style="height: 750px;">
+  <div class="img-wrapper"></div>
+  <div class="container">
+    <div class="row">
+      <div class="offset-sm-6 col-sm-6">
+        <div class="text-content">
+            <form id="my-form">
+                <div class="row">
+                    <p>פרטים אישיים</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <i class="fas fa-user-circle fa-2x"></i>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="שם פרטי" id="f_name">
+                      </div>
+                    </div>              
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="שם משפחה" id="l_name">
+                      </div>
+                    </div>
+                  </div>
+                  <div style="display: none;"  id="phone-input">
+                        <div class="row">
+                                <div class="col-md-2">
+                                    <i class="fas fa-phone fa-2x"></i>
+                                </div>
+                                <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="מספר טלפון" id="phone">
+                                    <i class="fas fa-times-circle text-danger" style="position: absolute; margin: -27px; " id="isFalseNumber"></i>
+                                    <i class="fas fa-check-circle text-success" style="position: absolute; margin: -27px; visibility: hidden; " id="isCorrectNumber"></i>
+                                    <i class="fas fa-check-circle text-primary" style="position: absolute; margin: -27px; visibility: hidden; " id="isCorrectCode"></i>
+                                </div>
+                                </div>              
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option data-countryCode="IL" value="972">+972 IL</option>
+                                    <option data-countryCode="IT" value="39">+39 IT</option>
+                                    <option data-countryCode="JM" value="1876">+1876 JM</option>
+                                    <option data-countryCode="JP" value="81">+81 JP</option>
+                                    <option data-countryCode="JO" value="962">+962 JO</option>
+                                    <option data-countryCode="KE" value="254">+254 KE</option>
+                                </select>
+                            </div>
+                        </div>
+                        </div>
+                  </div>
+                  <div style="display: none;"  id="verify-button">
+                    <div class="row" id="verification-area" style="visibility: hidden;">
+                        <div class="col-md-2">
+                            <i class="fas fa-check-square fa-2x text-primary"></i>
+                        </div>
+                        <div class="col-md-7">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="הכנס קוד אימות" id="ver">
+                        </div>
+                        </div>  
+                    </div>
+                    <div id="details-area" style="visibility: hidden;">
+                        <div class="row my-radio-section">
+                            <div class="col-md-6">
+                                <input type="radio" id="teen" name="gender" value="teen">
+                                <label for="teen">ממלא עבור קטין</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" id="amature" name="gender" value="amature">
+                                <label for="amature">ממלא עבור עצמי</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <i class="fas fa-birthday-cake fa-2x"></i>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="תאריך לידה" id="birth">
+                                </div>
+                                </div> 
+                        </div>
+                  
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <button id="verify-button" type="button" onclick="verify()" class="btn btn-primary my-btn">אמת מספר</button>
+                        </div>
+                        <div class="col-md-5">
+                            <button id="verify-code" type="button" class="btn btn-primary my-sec-btn" style="visibility: hidden; right: 0; left: 0;"><div class="loader"></div>
+                                מאמת</button>
+                        </div>
+                    </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
